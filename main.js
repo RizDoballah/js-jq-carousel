@@ -10,6 +10,17 @@ $(document).ready(
         clickPrev();
       }
     );
+
+    $(document).keydown(
+      function() {
+        console.log(event.keyCode);
+        if (event.keyCode == 39) {
+          clickNext();
+        } else if (event.keyCode == 37) {
+          clickPrev();
+        }
+      }
+    );
   }
 );
 
