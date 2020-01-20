@@ -21,11 +21,33 @@ $(document).ready(
         }
       }
     );
+
+    // $('i.first').click(
+      //   function() {
+        //     $('img.active').removeClass('active');
+        //     $('img.first').addClass('active');
+        //     $('i.active').removeClass('active');
+        //     $('i.first').addClass('active')
+        //   }
+        // )
+
+    $('.nav i').click(
+      function() {
+      var thisPosition = $(this).index();
+      var img = $('img').eq(thisPosition);
+      $('img').removeClass('active');
+      img.addClass('active');
+      $('.nav i').removeClass('active');
+      $(this).addClass('active');
+      }
+
+    );
   }
 );
 
 //------------
 // Funzioni
+
 function clickNext() {
   //immagini
   var imageActive = $('img.active');
